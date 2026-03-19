@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BOYD BANANZAS</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      background-color: #111;
+      color: white;
+    }
+    h1 {
+      margin-top: 20px;
+    }
+    iframe {
+      margin-top: 20px;
+      border: none;
+      width: 80%;
+      height: 500px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>🎮 My Game Hub</h1>
+  <p>Play games below:</p>
+
+  <iframe src="https://retrogamesonline.io/play/retro-bowl-25"></iframe>
+
+</body>
+</html>
