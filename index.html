@@ -10,88 +10,120 @@
             --bg: #1e1e2e;
             --card-bg: #2f3542;
             --text: #ffffff;
+            --accent: #2ed573;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--bg);
             color: var(--text);
             margin: 0;
             display: flex;
             flex-direction: column;
+            min-height: 100vh;
             align-items: center;
         }
 
         header {
-            padding: 40px 20px;
+            padding: 50px 20px;
             text-align: center;
         }
 
         header h1 {
-            font-size: 3rem;
+            font-size: clamp(2.5rem, 8vw, 4rem);
             margin: 0;
             color: var(--primary);
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 4px;
+            text-shadow: 3px 3px 0px rgba(0,0,0,0.3);
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.8;
+            margin-top: 10px;
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             width: 90%;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            padding-bottom: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding-bottom: 60px;
         }
 
         .game-card {
             background: var(--card-bg);
-            border-radius: 12px;
+            border-radius: 15px;
             overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             text-decoration: none;
             color: inherit;
-            border: 2px solid transparent;
+            border: 3px solid transparent;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
 
         .game-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+            transform: translateY(-12px);
+            box-shadow: 0 15px 35px rgba(255, 71, 87, 0.2);
             border-color: var(--primary);
         }
 
         .game-thumb {
             width: 100%;
-            height: 150px;
-            background: #454d5d;
+            height: 160px;
+            background: linear-gradient(45deg, #341f97, #5f27cd);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 4rem;
+        }
+
+        /* Specific color for Retro Bowl thumb */
+        .retro-thumb {
+            background: linear-gradient(45deg, #013220, #228b22);
         }
 
         .game-info {
-            padding: 15px;
+            padding: 20px;
             text-align: center;
         }
 
         .game-info h2 {
             margin: 0;
-            font-size: 1.4rem;
+            font-size: 1.5rem;
+            color: var(--text);
         }
 
         .game-info p {
-            font-size: 0.9rem;
-            opacity: 0.8;
-            margin-top: 8px;
+            font-size: 0.95rem;
+            opacity: 0.7;
+            margin-top: 10px;
+            line-height: 1.4;
+        }
+
+        .play-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 20px;
+            background: var(--primary);
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.8rem;
+            text-transform: uppercase;
         }
 
         footer {
             margin-top: auto;
-            padding: 20px;
-            font-size: 0.8rem;
-            opacity: 0.6;
+            padding: 30px;
+            width: 100%;
+            text-align: center;
+            font-size: 0.9rem;
+            opacity: 0.5;
+            background: rgba(0,0,0,0.1);
         }
     </style>
 </head>
@@ -99,31 +131,32 @@
 
     <header>
         <h1>Boyd Bananzas</h1>
-        <p>Choose your game and start playing!</p>
+        <p>Your Ultimate Web Gaming Hub</p>
     </header>
 
     <main class="container">
         
-        <a href="https://aks0509.github.io/game-one-repo/" class="game-card">
-            <div class="game-thumb">🎮</div>
+        <a href="retro-bowl.html" class="game-card">
+            <div class="game-thumb retro-thumb">🏈</div>
             <div class="game-info">
-                <h2>Space Shooter</h2>
-                <p>Blast through asteroids in this arcade classic.</p>
+                <h2>Retro Bowl</h2>
+                <p>Take command of your franchise, manage your roster, and win the big game!</p>
+                <div class="play-btn">Play Now</div>
             </div>
         </a>
 
-        <a href="https://aks0509.github.io/game-two-repo/" class="game-card">
-            <div class="game-thumb">🐍</div>
+        <a href="#" class="game-card" style="opacity: 0.6; cursor: default;">
+            <div class="game-thumb">🕹️</div>
             <div class="game-info">
-                <h2>Neon Snake</h2>
-                <p>A high-speed twist on a retro favorite.</p>
+                <h2>Coming Soon</h2>
+                <p>We're currently preparing more bananzas for you. Check back soon!</p>
             </div>
         </a>
 
-        </main>
+    </main>
 
     <footer>
-        &copy; 2026 Boyd Bananzas - Hosted via GitHub Pages
+        &copy; 2026 Boyd Bananzas • Powered by GitHub Pages
     </footer>
 
 </body>
