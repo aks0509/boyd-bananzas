@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Bowl | Boyd Bananzas</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #121212;
+            color: white;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        nav {
+            width: 100%;
+            padding: 15px;
+            background: #1e1e2e;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        nav a {
+            color: #ff4757;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .game-container {
+            flex-grow: 1;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .fullscreen-msg {
+            position: absolute;
+            bottom: 10px;
+            font-size: 12px;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">← Back to Boyd Bananzas</a>
+        <span>Retro Bowl - Classic Edition</span>
+    </nav>
+
+    <div class="game-container">
+        <iframe src="https://game316022.github.io/g7/retro-bowl/" allowfullscreen></iframe>
+    </div>
+
+    <p class="fullscreen-msg">Use your mouse/keyboard to play. Click the game area if keys aren't working.</p>
+
+</body>
+</html>
